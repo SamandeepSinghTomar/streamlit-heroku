@@ -1,12 +1,12 @@
-import streamlit as st
-string = "Two Numbers Division"
-st.set_page_config(page_title=string)
+#div
 
-st.title('Two Numbers Division')
-x = st.number_input('Enter number 1')
-y = st.number_input('Enter number 2')
-if (y!=0):
-    st.write("Result:")
-    st.write(x/y)
+import streamlit as st
+
+st.title('Two-Number Division')
+a= st.number_input('Number A')
+b =st.number_input('Number B')
+if b == 0:
+  a1=st.write(f'A/B = Undefined')
 else:
-    st.write("Zero Division Error!!")
+  a1=st.write(f'A/B = {a/b}')
+print(a1)
