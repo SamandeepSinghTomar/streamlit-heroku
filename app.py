@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 st.write("""
 # Two Number Divide App
@@ -13,29 +12,14 @@ def user_input_features():
     number_1 = st.number_input("Number_1")
     number_2 = st.number_input("Number_2")
     
-    data = {'Number_1': number_1,
-            'Number_2': number_2
-            }
-    features = pd.DataFrame(data, index=[0])
-    return features
+    return number_1,number_2
 
-df = user_input_features()
-
-
-for col in df.columns:
-    if df[col].dtype != 'float64':
-        df[col] = df[col].values.astype('float64')
-
-st.table(df)
-
-Result=df.number_1/df.number_2
-
-#Model Inferencing
+n1, n2 = user_input_features()
 
 st.subheader('Result:')
 
-if (df.number_2 != 0):
-    Result=df.number_1/df.number_2
+if (n2 != 0):
+    Result=n1/n2
     st.write(Result)
 else:
     st.write("Second Number is zero!, hence not divisible.")
