@@ -1,25 +1,12 @@
 import streamlit as st
+string = "Two Numbers Division"
+st.set_page_config(page_title=string)
 
-st.write("""
-# Two Number Divide App
-This app divides two number
-""")
-#Get Input
-
-st.header('User Input')
-
-def user_input_features():
-    number_1 = st.number_input("Number_1")
-    number_2 = st.number_input("Number_2")
-    
-    return number_1,number_2
-
-n1, n2 = user_input_features()
-
-st.subheader('Result:')
-
-if (n2 != 0):
-    Result=n1/n2
-    st.write(Result)
+st.title('Two Numbers Division')
+x = st.number_input('Enter number 1')
+y = st.number_input('Enter number 2')
+if (y!=0):
+    st.write("Result:")
+    st.write(x/y)
 else:
-    st.write("Second Number is zero!, hence not divisible.")
+    st.write("Zero Division Error!!")
