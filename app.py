@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-from sklearn import datasets
-import pickle
 
 st.write("""
 # Two Number Divide App
