@@ -2,6 +2,9 @@
 
 import streamlit as st
 
+string="2NumberDivision"
+st.set_page_config(page_title=string, page_icon="🧮")
+
 st.title('Two-Number Division')
 a= st.number_input('Number A')
 b =st.number_input('Number B')
